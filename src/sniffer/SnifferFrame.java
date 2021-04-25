@@ -27,14 +27,9 @@ public class SnifferFrame extends JFrame {
     private static final int DEFAULT_WIDTH = DEFAULT_HEIGHT * 16 / 9;
     private JLabel filterLabel;
     private JLabel packetInfoLabel;
-    private JLabel headerInformation;
-    private JScrollPane jScrollPane1;
-    private JScrollPane jScrollPane2;
-    private JScrollPane scrollPacketTable;
     public static JTable packetTable;
     private static JTextArea jTextArea1;
     private JTextArea decimalInfoText;
-    private JToolBar topToolBar;
     public static NetworkInterface[] NETWORK_INTERFACES;
     public static JpcapCaptor captureStatus;
     public CapturePacketThread capturePacketThread;
@@ -220,15 +215,15 @@ public class SnifferFrame extends JFrame {
     }
 
     public void initComponents() {
-        topToolBar = new JToolBar();
-        scrollPacketTable = new JScrollPane();
+        JToolBar topToolBar = new JToolBar();
+        JScrollPane scrollPacketTable = new JScrollPane();
 
-        jScrollPane1 = new JScrollPane();
+        JScrollPane jScrollPane1 = new JScrollPane();
         jTextArea1 = new JTextArea();
-        jScrollPane2 = new JScrollPane();
+        JScrollPane jScrollPane2 = new JScrollPane();
         decimalInfoText = new JTextArea();
 
-        headerInformation = new JLabel();
+        JLabel headerInformation = new JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("AUT Packet Sniffer _ Computer Network");
